@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+*.manifest
+*.spec
+*.log
+*.pot
+*.pyc
+pip-log.txt
+*.sqlite3
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+.ENV/
+.env/
+*.env
+
+# Django
+*.db
+*.sqlite3
+*.pyc
+media/
+staticfiles/
+static/
+db.sqlite3
+.DS_Store
+*.mo
+
+# Angular
+node_modules/
+dist/
+tmp/
+out-tsc/
+.angular/
+coverage/
+*.tsbuildinfo
+
+# IDEs & editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+.DS_Store

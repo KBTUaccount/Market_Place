@@ -1,0 +1,23 @@
+<h2>Product List</h2>
+
+<label for="categorySelect">Filter by Category: </label>
+<select id="categorySelect" [(ngModel)]="selectedCategory">
+  <option [ngValue]="0">All</option>
+  <option *ngFor="let category of categories" [ngValue]="category.id">
+    {{ category.title }}
+  </option>
+</select>
+
+<ul *ngIf="filteredProducts().length > 0; else noProducts">
+  <li *ngFor="let product of filteredProducts()">
+    <strong>{{ product.name }}</strong> - {{ product.price }}$<br />
+    {{ product.description }}<br />
+    Category ID: {{ product.category }}
+    <button (click)="buyProduct(product.id)">Buy</button>
+  </li>
+</ul>
+
+<ng-template #noProducts>
+  <p>No products available.</p>
+</ng-template>
+    

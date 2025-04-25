@@ -1,0 +1,11 @@
+<div class="home">
+    <h1>Marketplace</h1>
+    <p>The fastest way to buy and sell cool stuff.</p>
+  
+    <div class="actions">
+      <a *ngIf="!auth.isLoggedIn()" routerLink="/login" class="btn">Login</a>
+      <a *ngIf="!auth.isLoggedIn()" routerLink="/register" class="btn">Register</a>
+      <a *ngIf="auth.isLoggedIn()" routerLink="/products" class="btn">Browse Products</a>
+    </div>
+  </div>
+  

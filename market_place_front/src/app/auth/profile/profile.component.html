@@ -1,0 +1,39 @@
+<h2>My Profile</h2>
+
+<div *ngIf="loading">Loading profile...</div>
+
+<div *ngIf="!loading && !error">
+  <p><strong>Username:</strong> {{ username }}</p>
+  <p><strong>Balance:</strong> ${{ balance }}</p>
+
+  <h3>🧾 My Orders</h3>
+  <ul *ngIf="orders.length > 0; else noOrders">
+    <li *ngFor="let order of orders">
+      <p>Order #{{ order.id }} - {{ order.items.length }} item(s)</p>
+
+      <ul>
+        <li *ngFor="let item of order.items">
+          📦 <strong>{{ item.product_name }}</strong> — 
+          Quantity: {{ item.quantity }} — 
+          Price: ${{ item.price_at_purchase }}
+        </li>
+      </ul>
+
+    </li>
+  </ul>
+  <ng-template #noOrders>
+    <p>No orders found.</p>
+  </ng-template>
+
+  <h3>🛍 My Products</h3>
+  <ul *ngIf="products.length > 0; else noProducts">
+    <li *ngFor="let product of products">
+      <strong>{{ product.name }}</strong> - ${{ product.price }}
+    </li>
+  </ul>
+  <ng-template #noProducts>
+    <p>No products found.</p>
+  </ng-template>
+</div>
+
+<p *ngIf="error" style="color: red;">{{ error }}</p>

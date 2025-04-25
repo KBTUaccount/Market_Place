@@ -1,0 +1,35 @@
+h2, h3 {
+    margin-top: 1rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background: #f1f1f1;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  
+  strong {
+    color: #333;
+  }
+  
+  ul ul {
+    margin-left: 1rem;
+  }
+  
+  .loading, .error {
+    font-weight: bold;
+    color: red;
+    margin-top: 1rem;
+  }
+  
